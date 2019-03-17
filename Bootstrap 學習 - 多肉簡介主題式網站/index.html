@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 主題式網頁＋Skrollr 練習</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<nav class="navbar navbar-expand-sm navbar-light fixed-top">
+  <ul class="navbar navbar-nav ml-auto">
+    <li class="nav-item"><a class="nav-link" href="#header">回到頂端 TOP</a></li>
+    <li class="nav-item"><a class="nav-link" href="#section_ask">引言 INTRO</a></li>
+    <li class="nav-item"><a class="nav-link" href="#section_type">種類 SPICIES</a></li>
+    <li class="nav-item"><a class="nav-link" href="#section_story">推坑 POISON</a></li>
+    <li class="nav-item"><a class="nav-link" href="#footer">聯絡我 CONTACT</a></li>
+  </ul>
+</nav>
+<header class="jumbotron" id="header">
+  <div class="container">
+    <div class="header_title" data-0="transform: translateY(0px)" data-500="transform: translateY(200px)">
+      <h1>多肉植物，神奇的小傢伙們</h1>
+      <hr/>
+      <h5>跟著我來認識他們吧！</h5>
+    </div>
+  </div>
+</header>
+<section id="section_ask" data-0="opacity: 0;" data-center="opacity: 1;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" data-200="transform: translateX(300px);opacity: 0" data-420="transform: translateX(0px);opacity: 1">
+        <h2>你有看過<br>多肉植物嗎？</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_type">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 data-bottom-top="opacity: 0;transform: translateY(30px)" data-center="opacity: 1;transform: translateY(0px)">常見的種類</h2>
+        <hr/>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="img_wrap" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)"><img class="echeveria" src="https://i.pinimg.com/originals/e4/3b/b4/e43bb4736399b3c0a4df1e178e9214f5.jpg" alt=""/></div>
+        <hr/>
+        <div class="text_about" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)">
+          <h4>Echeveria.sp（擬石蓮屬）</h4>
+          <p>是常見的蓮座型多肉。擁有相當多的園藝雜交種。擁有在溫差較大、較乾燥且日照強的環境下會變色的有趣特性，觀賞特點就是在於變色後的姿態。<br>但在北部比較難飼養。<br>（圖中為「老樂」）</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="img_wrap" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)"><img class="haworthia" src="https://farm4.staticflickr.com/3824/9585389573_135a5e8798_b.jpg" alt=""/></div>
+        <hr/>
+        <div class="text_about" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)">
+          <h4>Haworthia.sp（十二卷屬）</h4>
+          <p>我最喜歡的一類，相對於 Echeveria 來說更好飼養。特色是葉子先端會有透明的「葉窗」，而型態、花紋等等也會根據種類產生不同變化。<br>還可以再細分為「玉露系」、「壽系」、「玉扇系」以及「萬象系」。<br>（圖中為「三色萬象」）</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="img_wrap" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)"><img class="aeonium" src="https://altmanplants.com/wp-content/uploads/screen-saver-26.jpg" alt=""/></div>
+        <hr/>
+        <div class="text_about" data-bottom-top="opacity: 0;transform: translateY(50px)" data-center="opacity: 1;transform: translateY(0px)">
+          <h4>Aeonium.sp（蓮花掌屬）</h4>
+          <p>我們常用「ＸＸ法師」稱呼它們。易長成立木型態，因此觀賞的重點是放在植株的姿態以及葉面因色素變異而產生的花紋（我們稱之為錦斑）。<br>喜歡北部的冬天，生長速度十分快速，但比較難渡過夏天，新手不建議飼養。<br>（圖中為「翡翠冰」）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_story">
+  <div class="container-fluid">
+    <div class="row main_row">
+      <div class="col-12 col-sm-5 map" data-bottom-top="background-size: 150%;background-position: 0% 0%" data-center="background-size: 100%;background-position: 50% 50%"></div>
+      <div class="col-12 col-sm-7">
+        <div class="row top_row">
+          <div class="col-12 title">
+            <h2>為什麼可以嘗試養養看？</h2>
+            <hr/>
+          </div>
+        </div>
+        <div class="row bottom_row">
+          <div class="col-4" data-bottom-top="opacity: 0;transform: scale(1.5)" data-center="opacity: 1;transform: scale(1)"><i class="far fa-smile"></i>
+            <h4>容錯率高</h4>
+          </div>
+          <div class="col-4" data-bottom-top="opacity: 0;transform: scale(1.5)" data-center="opacity: 1;transform: scale(1)"><i class="far fa-heart"></i>
+            <h4>學習耐心</h4>
+          </div>
+          <div class="col-4" data-bottom-top="opacity: 0;transform: scale(1.5)" data-center="opacity: 1;transform: scale(1)"><i class="far fa-seedling"></i>
+            <h4>型態療癒</h4>
+          </div>
+          <div class="col-12">
+            <p>因為這些理由<br>所以很推薦大家進（ㄉㄧㄠˋ）入（ㄐㄧㄣˋ）多肉植物的世界喔！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="jumbotron" id="footer" data-200-bottom="opacity: 0.5" data-bottom="opacity: 1">
+  <div class="container" data-100-bottom="transform: translateY(50px);opacity: 0" data-bottom="transform: translateY(0px);opacity: 1">
+    <h2>想進一步了解更多肉嗎？訂閱吧！</h2>
+    <input class="form-control" placeholder="請輸入 Email"/>
+    <div class="btn btn-secondary">送出以訂閱</div>
+  </div>
+</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

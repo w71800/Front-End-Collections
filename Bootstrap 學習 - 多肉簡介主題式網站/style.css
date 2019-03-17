@@ -1,0 +1,201 @@
+body {
+  height: 1000px;
+}
+
+nav.navbar, .navbar-nav {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+nav.navbar .navbar-nav .nav-item {
+  margin-right: 15px;
+}
+nav.navbar .navbar-nav .nav-item .nav-link {
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+  color: #8B5240;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+nav.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #D8CFDE;
+  border-bottom: 3px solid #D8CFDE;
+}
+
+nav.navbar .navbar-nav .nav-item .text_change {
+  color: #D8CFDE;
+}
+
+.navbar_background_color {
+  background-color: #937251;
+  box-shadow: -4px 1px 10px 1px;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/xT5hzmO/brightly-colored-flowering-mesemb-malephora-spp-waving-in-the-wind-karoo-region-eastern-cape-south-africa_bxe2qhaze_thumbnail-full01.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 5% -100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+header.jumbotron .container {
+  color: white;
+  padding: 200px 80px;
+}
+header.jumbotron .container .header_title {
+  border-radius: 20px;
+  background-color: rgba(139, 82, 64, 0.7);
+  padding: 30px 0px;
+}
+header.jumbotron .container .header_title h1 {
+  margin-bottom: 25px;
+}
+header.jumbotron .container .header_title hr {
+  border: 2px solid #D8CFDE;
+  max-width: 50px;
+}
+header.jumbotron .container .header_title h5 {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  margin-top: 25px;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+section#section_ask {
+  padding: 30px 0px;
+  background-color: #8B5240;
+}
+section#section_ask .container .row .col-12 {
+  margin-top: auto;
+}
+section#section_ask .container .row .col-12 h2 {
+  color: white;
+  margin-left: 0px;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 5px;
+}
+
+section#section_type {
+  background-color: #D8CFDE;
+}
+section#section_type img {
+  width: 130%;
+}
+section#section_type .img_wrap {
+  box-shadow: 0px 10px 8px -3px;
+  height: 250px;
+  overflow: hidden;
+}
+section#section_type .img_wrap .haworthia {
+  transform: translate(-40px, -25px);
+}
+section#section_type .img_wrap .aeonium {
+  transform: translate(-45px, -30px);
+}
+section#section_type h3, section#section_type h4 {
+  text-align: left;
+}
+section#section_type .col-md-6, section#section_type .col-lg-4 {
+  padding: 15px;
+}
+section#section_type .col-md-6 hr, section#section_type .col-lg-4 hr {
+  margin: 30px 0px;
+  margin-bottom: 17px;
+  border: 2px solid rgba(147, 114, 81, 0.2);
+  width: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+section#section_type p {
+  margin-bottom: -5px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+section#section_story {
+  background-color: #222;
+  color: white;
+  padding: 0px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-5 {
+  background-image: url(https://www.charlotteargyrou.com/wp-content/uploads/2017/09/charlotte-succulent-two.jpg);
+  background-size: cover;
+  height: 400px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 {
+  background-color: #503529;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .top_row .title h2 {
+  padding: 20px;
+  margin: 0px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .top_row .title hr {
+  border: 1px solid white;
+  margin: 10px;
+  margin-top: 5px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .bottom_row {
+  text-align: center;
+  padding-top: 10px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .bottom_row .col-4 {
+  margin-bottom: 15px;
+  padding: 15px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .bottom_row .col-4 i {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+section#section_story .container-fluid .row .col-12.col-sm-7 .bottom_row .col-12 p {
+  line-height: 1.7rem;
+}
+
+footer.jumbotron {
+  text-align: center;
+  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/xT5hzmO/brightly-colored-flowering-mesemb-malephora-spp-waving-in-the-wind-karoo-region-eastern-cape-south-africa_bxe2qhaze_thumbnail-full01.png);
+  background-size: cover;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  color: white;
+}
+footer.jumbotron .container {
+  text-align: center;
+  padding: 30px;
+}
+footer.jumbotron .container h2 {
+  margin-bottom: 30px;
+}
+footer.jumbotron .container input {
+  border: 1px solid rgba(147, 114, 81, 0.5);
+  color: #937251;
+  text-align: center;
+  margin-top: 15px;
+  background-color: transparent;
+  max-width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 35px;
+}
+footer.jumbotron .container ::placeholder {
+  color: #937251;
+}
+footer.jumbotron .container .btn {
+  margin-top: 0px;
+  background-color: rgba(147, 114, 81, 0.6);
+  border: none;
+}
+footer.jumbotron .container .btn:hover {
+  transform: scale(1.1);
+}
