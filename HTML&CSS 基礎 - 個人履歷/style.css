@@ -1,0 +1,328 @@
+@charset "UTF-8";
+#soft {
+  display: block;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #999;
+}
+
+* {
+  font-family: 微軟正黑體;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#resume {
+  padding: 40px 0px;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin: 50px 30px;
+  background-color: white;
+  box-shadow: 10px 15px 10px -3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 500;
+  color: #5E5E5E;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 20px;
+}
+#header .img {
+  background-image: url(https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.0-9/15036314_1493485110668598_5188823336718441951_n.jpg?_nc_cat=105&_nc_ht=scontent.ftpe4-1.fna&oh=bab9d0aed01e0bd62567a318ae6dc519&oe=5D0E4793);
+  background-position: center center;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: 3px 5px 5px -3px rgba(0, 0, 0, 0.5);
+}
+#header .dec_block {
+  border: 3px solid #D6D5D5;
+  margin: 15px;
+}
+#header .dec_1 {
+  height: 45px;
+  margin-left: 30px;
+}
+#header .dec_2 {
+  height: 80px;
+  margin-left: 0px;
+  margin-right: 30px;
+}
+#header .text .name {
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+#header .text .name .identity {
+  font-size: 18px;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.3);
+}
+#header .text .sub_info {
+  color: #D9D8D8;
+}
+#header .text .sub_info .school {
+  margin-bottom: 7px;
+}
+#header .text .sub_info .contact {
+  font-family: "IBM Plex Serif", serif;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  padding: 13px;
+}
+#info .left_bracket, #info .main_text, #info .right_bracket {
+  display: inline-block;
+}
+#info .main_text {
+  font-size: 15px;
+  color: #5E5E5E;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6rem;
+  padding-top: 17px;
+}
+#info .left_bracket {
+  width: 50px;
+  height: 150px;
+  margin-right: 15px;
+  background-image: url(https://upload.cc/i1/2019/03/11/RkFods.png);
+  background-size: cover;
+  opacity: 0.4;
+}
+#info .right_bracket {
+  width: 50px;
+  height: 160px;
+  margin-left: 6px;
+  background-image: url(https://upload.cc/i1/2019/03/11/QAXfGE.png);
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.dec_dashed {
+  border: 6px dashed rgba(214, 198, 180, 0.2);
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+#exp {
+  margin-left: 30px;
+}
+#exp .content {
+  margin-left: 50px;
+  margin-right: 70px;
+  border-left: 1px solid rgba(231, 231, 231, 0.2);
+  padding-left: 40px;
+}
+#exp .content .work {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 23px;
+}
+#exp .content .work .location {
+  font-size: 15px;
+  color: #5E5E5E;
+  font-weight: 600;
+}
+#exp .content .work .text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7rem;
+  color: #9C9C9C;
+  margin-top: 10px;
+}
+
+#pro_ability {
+  margin-left: 30px;
+}
+#pro_ability .content {
+  margin-left: 50px;
+  border-left: 1px solid rgba(231, 231, 231, 0.2);
+  padding-left: 40px;
+}
+#pro_ability .subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#pro_ability .subtitle span {
+  color: #A9A9A9;
+  font-size: 14px;
+  font-weight: 500;
+}
+#pro_ability .subtitle .graph {
+  display: flex;
+  padding: 20px 0px;
+}
+#pro_ability .subtitle .graph .left_area {
+  margin-right: 50px;
+}
+#pro_ability .subtitle .graph .items {
+  display: flex;
+  align-items: center;
+  color: #606060;
+  font-size: 18px;
+  padding: 20px 5px;
+}
+#pro_ability .subtitle .graph .items .text, #pro_ability .subtitle .graph .items .block_group {
+  display: inline-flex;
+}
+#pro_ability .subtitle .graph .items .text {
+  width: 130px;
+  letter-spacing: 1px;
+}
+#pro_ability .subtitle .graph .items .block_group .block_yes, #pro_ability .subtitle .graph .items .block_group .block_none {
+  opacity: 0.8;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+#pro_ability .subtitle .graph .items .block_group .block_yes {
+  background-color: #D6C6B4;
+}
+#pro_ability .subtitle .graph .items .block_group .block_none {
+  border: 2px solid #D6C6B4;
+}
+
+#soft {
+  margin-left: 30px;
+  display: inline-block;
+}
+#soft .content .histogram {
+  display: flex;
+  align-items: center;
+  font-size: 0px;
+}
+#soft .content .histogram .abilities {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80px;
+  height: 180px;
+  margin-right: 20px;
+}
+#soft .content .histogram .abilities h4 {
+  margin: 0px;
+  font-size: 15px;
+  text-align: right;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#soft .content .histogram .abilities .no_margin {
+  margin-top: 0px;
+}
+#soft .content .histogram .axis {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  height: 180px;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+#soft .content .histogram .axis .block {
+  height: 20px;
+  width: 20px;
+  margin-top: 20px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: rgba(214, 198, 180, 0.8);
+}
+#soft .content .histogram .axis .create {
+  margin-top: 0px;
+  width: 325px;
+}
+#soft .content .histogram .axis .learn, #soft .content .histogram .axis .logic {
+  width: 225px;
+}
+#soft .content .histogram .axis .transform {
+  width: 300px;
+}
+
+#hobby {
+  display: block;
+  border-left: 1px solid rgba(231, 231, 231, 0.3);
+  margin-left: 25px;
+  padding-left: 30px;
+}
+#hobby .title::after {
+  content: "（仍在摸索中..）";
+  font-size: 14px;
+  margin-right: 10px;
+  color: #A9A9A9;
+}
+#hobby .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+#hobby .content .row {
+  display: flex;
+  margin-bottom: 15px;
+}
+#hobby .content .row .items {
+  width: 100px;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 10px 10px;
+  margin-left: 18px;
+  border-radius: 10px;
+  background-color: rgba(214, 198, 180, 0.8);
+  color: white;
+  font-weight: 400;
+  line-height: 22px;
+}
+#hobby .content .bottom_row {
+  margin-bottom: 0px;
+}
+
+.flex_row {
+  display: inline-flex;
+}
+
+#exp .work::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgba(214, 198, 180, 0.3);
+  position: absolute;
+  left: -30px;
+  top: 11px;
+}
+
+#pro_ability .subtitle::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgba(214, 198, 180, 0.3);
+  position: absolute;
+  left: -30px;
+  top: 11px;
+}
