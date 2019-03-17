@@ -69,7 +69,6 @@ function()
     }  
   });
 
-// else if 的邏輯是甚麼意思?為什麼不用if或者是else就好?我發現，如果沒有加上else說明"其餘"的意思，就會發生與上段的邏輯衝突。
 var time=0;
 $(".contact").click(
 function()
@@ -84,4 +83,3 @@ function()
       ,1000);
   }
 );
-// 為什麼不能選擇.contact_show作為觸發的元件？
