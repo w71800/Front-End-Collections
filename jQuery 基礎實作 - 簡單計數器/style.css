@@ -1,0 +1,70 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: #333;
+}
+
+.add, .minus, .num {
+  display: inline-block;
+  font-size: 50px;
+  padding: 13px;
+  width: 50px;
+  text-align: center;
+}
+
+.add, .minus {
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition-duration: 0.3s;
+}
+.add:hover, .minus:hover {
+  background-color: white;
+  color: black;
+}
+
+.count {
+  border: 3px solid white;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.text {
+  text-align: center;
+  padding: 8px;
+  padding-top: 0px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  border-bottom: 7px solid white;
+  transition-duration: 0.5s;
+}
+
+.contact {
+  text-align: center;
+  letter-spacing: 2px;
+  height: 0px;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+
+.contact_show {
+  text-align: center;
+  padding: 8px;
+  letter-spacing: 2px;
+  height: 20px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
