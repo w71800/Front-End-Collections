@@ -1,0 +1,190 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: 微軟正黑體;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  background-color: #E9EBEE;
+}
+
+.topbar {
+  height: 50px;
+  background-color: #3967AF;
+  border-bottom: 1px solid #000;
+  font-size: 0px;
+}
+.topbar .icon {
+  height: 30px;
+  background-color: #3967AF;
+  top: 10px;
+  left: 3%;
+  cursor: pointer;
+}
+.topbar input {
+  border: none;
+  width: 75%;
+  height: 25px;
+  bottom: 1px;
+  margin-left: 4%;
+  border-radius: 4px;
+  border: 2px solid #3B539A;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E9EBEE;
+}
+.container .cover {
+  height: 315px;
+  background-image: url("https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/14962645_1483503605000082_5044459657155639491_n.jpg?_nc_cat=109&_nc_ht=scontent.ftpe4-2.fna&oh=57b2634b5e9696e2e187023232390864&oe=5CCAD459");
+  background-position: 0 47%;
+  background-size: cover;
+}
+.container .midbar {
+  height: 50px;
+  border-bottom: 1px solid #E9EBEE;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #D3D6DB;
+}
+.container .midbar .selfy {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  border: 4px solid #FFFFFF;
+  position: absolute;
+  top: -120px;
+  left: 30px;
+  background-image: url("https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/35134072_2146046775412425_5449740172029591552_n.jpg?_nc_cat=111&_nc_ht=scontent.ftpe4-2.fna&oh=b56e6785fdbedbdb1b7ed579b7b0c372&oe=5CB8EFEA");
+  background-size: contain;
+  cursor: pointer;
+}
+.container .midbar .selfy .name {
+  position: absolute;
+  right: -240px;
+  top: 70px;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  font-weight: 400;
+  cursor: initial;
+}
+.container .midbar .selfy .name .chtname, .container .midbar .selfy .name .engname {
+  display: inline-block;
+  font-size: 30px;
+}
+.container .midbar .selfy .name .engname {
+  font-size: 20px;
+}
+.container .bottombar {
+  width: 35%;
+  min-width: 360px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #D3D6DB;
+  border-radius: 3px;
+}
+.container .bottombar .earth_outer {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  background-color: #4260B4;
+  justify-content: center;
+  align-items: center;
+}
+.container .bottombar .earth_outer .fa-globe-americas {
+  color: white;
+}
+.container .bottombar .profile {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-left: 4px;
+}
+.container .bottombar .profile_text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.container .bottombar hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  height: 1px;
+  background-color: #EBEDF0;
+}
+.container .bottombar .profile_items {
+  margin-top: 8px;
+}
+.container .bottombar .profile_items .url_blue {
+  color: #35529B;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .container .bottombar {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .topbar {
+    height: 60px;
+  }
+  .topbar .icon {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 3%;
+  }
+  .topbar input {
+    width: calc(70% - 40px - 10px);
+    height: 30px;
+    bottom: 6px;
+    margin-left: 5%;
+    margin-right: 10px;
+    background-color: #2c5089;
+    color: #FFFFFF;
+  }
+
+  .container .midbar {
+    height: 120px;
+  }
+  .container .midbar .selfy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .midbar .selfy .name {
+    right: initial;
+    left: 53%;
+    top: 103%;
+    transform: translateX(-50%);
+    color: #555;
+    font-weight: 500;
+  }
+  .container .bottombar {
+    border: none;
+    margin: initial;
+    padding: initial;
+    margin-left: 0px;
+    margin-top: -1px;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    padding-right: 3px;
+    margin-right: -3px;
+    padding-bottom: 15px;
+  }
+  .container .bottombar .profile_title .earth_outer, .container .bottombar .profile_title .profile {
+    transform: translateX(-3px) translateY(3px);
+  }
+}
