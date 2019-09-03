@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@keyframes jumping {
+  50% {
+    transform: translateY(0px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translateY(-50px);
+    box-shadow: -5px 100px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes eyemove {
+  0%,10% {
+    transform: translateX(-10px);
+  }
+  80%,100% {
+    transform: translateX(10px);
+  }
+}
+* {
+  font-family: 微軟正黑體;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #E55A54;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "微軟正黑體";
+}
+
+.loadingpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0C4475;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loadingpage.remove {
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+.loadingpage.remove .monster {
+  transform: scale(0) rotate(360deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+.loadingpage .monster {
+  width: 150px;
+  height: 150px;
+}
+.loadingpage .loading {
+  width: 40%;
+  height: 12px;
+  background-color: white;
+  border-radius: 6px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.loadingpage .loading .bar {
+  width: 0%;
+  height: 100%;
+  background-color: #E55A54;
+  border-radius: 6px;
+}
+.loadingpage .text {
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.loadingpage .start {
+  width: 150px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #E55A54;
+  margin-top: 100px;
+  cursor: pointer;
+}
+.loadingpage .start:hover {
+  background-color: white;
+  color: #0C4475;
+  font-weight: 700;
+}
+.loadingpage .start.hide {
+  opacity: 0;
+}
+
+.title {
+  color: white;
+  margin-right: 50px;
+}
+.title h2 {
+  font-size: 50px;
+}
+.title h4 {
+  font-size: 25px;
+  opacity: 0.5;
+}
+
+.monster {
+  width: 110px;
+  height: 110px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  animation: jumping 0.8s infinite alternate;
+  background-color: #E55A54;
+}
+.monster:before, .monster:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 20%;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.monster:before {
+  transform: translateX(-20%) rotate(45deg);
+}
+.monster:after {
+  transform: translateX(20%) rotate(-45deg);
+}
+.monster .eye {
+  width: 40%;
+  height: 40%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.monster .eye .eyeball {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #0C4475;
+  animation: eyemove 1s infinite alternate ease-out;
+}
+.monster .mouth {
+  width: 32%;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-top: 12%;
+}
+.monster.blue {
+  background-color: #0C4475;
+  animation-delay: 0.5s;
+}
+.monster.blue .mouth, .monster.blue .eyeball {
+  background-color: #E55A54;
+}
