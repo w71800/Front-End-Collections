@@ -38,6 +38,7 @@
         <input type="text" v-model="inputData.singleInputs[i]" :key="i"/>
         <div class="ansStatus"><i class="fas fa-check"></i>
           <!-- 下面這條 v-if 加到上面的 i 元素，整個就無法 render 了....-->
+          <!-- (v-if="inputData.singleInputs[i] == ansData.singleInputs[i]") -->
         </div>
       </div>
     </div>
