@@ -17,15 +17,15 @@
     <div class="info">
       <div class="show">
         <button>性別</button>
-        <div class="text">{{currentWord.type}}</div>
+        <div v-if="currentWord" class="text">{{currentWord.type}}</div>
       </div>
       <div class="show">
         <button>變格</button>
-        <div class="text">{{currentWord.declension}}</div>
+        <div v-if="currentWord" class="text">{{currentWord.declension}}</div>
       </div>
       <div class="show">
         <button>詞幹</button>
-        <div class="text">{{currentWord.stem}}</div>
+        <div v-if="currentWord" class="text">{{currentWord.stem}}</div>
       </div>
     </div>
   </div>
@@ -36,18 +36,19 @@
       <div class="row" v-for="(item,i) in caseList">
         <label>{{item.cht}}</label>
         <input type="text" v-model="inputData.singleInputs[i]" :key="i"/>
-        <div class="ansStatus"><i class="fas fa-check"></i>
-          <!-- 下面這條 v-if 加到上面的 i 元素，整個就無法 render 了....-->
-          <!-- (v-if="inputData.singleInputs[i] == ansData.singleInputs[i]") -->
+        <div class="ansStatus">
+          <i v-if="inputData.singleInputs[i] === (ansData && ansData.singleInputs[i])" class="fas fa-check"></i>
         </div>
       </div>
     </div>
     <div class="mainInput right">
       <div class="name">Plural</div>
-      <div class="row" v-for="(item,index) in caseList" :key="item.eng">
+      <div class="row" v-for="(item,i) in caseList" :key="item.eng">
         <label>{{item.cht}}</label>
-        <input type="text" v-model="inputData.pluralInputs[index]"/>
-        <div class="ansStatus"><i class="fas fa-check"></i></div>
+        <input type="text" v-model="inputData.pluralInputs[i]"/>
+        <div class="ansStatus">
+          <i v-if="inputData.pluralInputs[i] === (ansData && ansData.pluralInputs[i])" class="fas fa-check"></i>
+        </div>
       </div>
     </div>
   </div>

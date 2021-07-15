@@ -1,7 +1,7 @@
 console.clear()
 
 // 這邊是 sheet 的 ID
-var sheetID = "1wsjKUia5KvuUzFjs_97a5tir3583KZXDIuBGvmKYsZQ"  
+var sheetID = "1wsjKUia5KvuUzFjs_97a5tir3583KZXDIuBGvmKYsZQ"
 var sheetNum = 1
 // 這是 url 的格式
 const url = "https://spreadsheets.google.com/feeds/list/" + sheetID +"/" + sheetNum + "/public/values?alt=json";
@@ -20,7 +20,7 @@ var vm = new Vue({
     ],
     words: [],
     userInput: "",
-    currentWord: {},
+    currentWord: null,
     status: "使用者尚未輸入...",
     inputData: {
       singleInputs: [],
@@ -30,15 +30,15 @@ var vm = new Vue({
   },
   watch: {
     userInput: function(newInput,oldInput){
-      // 從資料包中尋找對應使用者輸入的單數主格，找到了的話並把它放在 currentWord，沒找到則傳回 0 
-      vm.currentWord = vm.words.find( word => word.single.NOM == vm.userInput ) || 0
-      console.log(vm.currentWord)
-      
+      // 從資料包中尋找對應使用者輸入的單數主格，找到了的話並把它放在 currentWord，沒找到則傳回 0
+      this.currentWord = this.words.find( word => word.single.NOM == this.userInput ) || null
+      console.log(this.currentWord)
+
       // 根據有無找到對應的 currentWord 來決定 status 的顯示
-      if(typeof(vm.currentWord) == "object" && vm.currentWord.type != ""){
-        vm.status = "找到了，試試看！"
+      if(typeof(this.currentWord) == "object" && this.currentWord !== null && this.currentWord.type != ""){
+        this.status = "找到了，試試看！"
       }else{
-        vm.status = "資料庫中沒找到這個字..."
+        this.status = "資料庫中沒找到這個字..."
       }
     },
   },
@@ -46,13 +46,13 @@ var vm = new Vue({
     // 從抓到的 currentWord 中複製對應的答案進去 ansData（單數與複數得答案所構成的 Array）
     ansData: function(){
       // 寫的有點醜，但原理就是從 currentWord 中將答案放到 ansData 屬性中的陣列，再於 HTML 中使用 v-if 和來判斷使用者輸入與答案是否有一樣，一樣者則渲染出勾勾的 icon
-      if(vm.currentWord){
+      if(this.currentWord){
         let ansTemp = {
           singleInputs: [],
           pluralInputs: []
         }
-        ansTemp.singleInputs = [vm.currentWord.single.NOM,vm.currentWord.single.GEN,vm.currentWord.single.DAT,vm.currentWord.single.ACC,vm.currentWord.single.ABL,vm.currentWord.single.VOC,]
-        ansTemp.pluralInputs = [vm.currentWord.plural.NOM,vm.currentWord.plural.GEN,vm.currentWord.plural.DAT,vm.currentWord.plural.ACC,vm.currentWord.plural.ABL,vm.currentWord.plural.VOC,]
+        ansTemp.singleInputs = [this.currentWord.single.NOM,this.currentWord.single.GEN,this.currentWord.single.DAT,this.currentWord.single.ACC,this.currentWord.single.ABL,this.currentWord.single.VOC,]
+        ansTemp.pluralInputs = [this.currentWord.plural.NOM,this.currentWord.plural.GEN,this.currentWord.plural.DAT,this.currentWord.plural.ACC,this.currentWord.plural.ABL,this.currentWord.plural.VOC,]
         return ansTemp
       }
       else return null
@@ -60,6 +60,7 @@ var vm = new Vue({
   },
   created: function(){
     // Vue 物件生成時執行 ajax 取得字彙資料包並處理
+    const self = this;
     $.ajax({
     url: url,
     success: function(evt){
@@ -90,7 +91,7 @@ var vm = new Vue({
         }
         dataContainer.push(wordData)
       })
-      vm.words = dataContainer
+      self.words = dataContainer
       },
     })
   },
