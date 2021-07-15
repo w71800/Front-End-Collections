@@ -90,7 +90,6 @@ var vm = new Vue({
         }
         dataContainer.push(wordData)
       })
-      vm.loaded = true  
       vm.words = dataContainer
       },
     })
