@@ -18,45 +18,22 @@ var vm = new Vue({
       {cht:"奪格",eng:"ABL"},
       {cht:"呼格",eng:"VOC"}
     ],
-    words: [],
+    words: {},
     userInput: "",
-    currentWord: null,
-    status: "使用者尚未輸入...",
     inputData: {
       singleInputs: [],
       pluralInputs: []
     },
     inputIsSelected: false,
   },
-  watch: {
-    userInput: function(newInput,oldInput){
-      // 從資料包中尋找對應使用者輸入的單數主格，找到了的話並把它放在 currentWord，沒找到則傳回 0
-      this.currentWord = this.words.find( word => word.single.NOM == this.userInput ) || null
-      console.log(this.currentWord)
-
-      // 根據有無找到對應的 currentWord 來決定 status 的顯示
-      if(typeof(this.currentWord) == "object" && this.currentWord !== null && this.currentWord.type != ""){
-        this.status = "找到了，試試看！"
-      }else{
-        this.status = "資料庫中沒找到這個字..."
-      }
-    },
-  },
   computed: {
-    // 從抓到的 currentWord 中複製對應的答案進去 ansData（單數與複數得答案所構成的 Array）
-    ansData: function(){
-      // 寫的有點醜，但原理就是從 currentWord 中將答案放到 ansData 屬性中的陣列，再於 HTML 中使用 v-if 和來判斷使用者輸入與答案是否有一樣，一樣者則渲染出勾勾的 icon
-      if(this.currentWord){
-        let ansTemp = {
-          singleInputs: [],
-          pluralInputs: []
-        }
-        ansTemp.singleInputs = [this.currentWord.single.NOM,this.currentWord.single.GEN,this.currentWord.single.DAT,this.currentWord.single.ACC,this.currentWord.single.ABL,this.currentWord.single.VOC,]
-        ansTemp.pluralInputs = [this.currentWord.plural.NOM,this.currentWord.plural.GEN,this.currentWord.plural.DAT,this.currentWord.plural.ACC,this.currentWord.plural.ABL,this.currentWord.plural.VOC,]
-        return ansTemp
-      }
-      else return null
-    }
+    currentWord() {
+      return this.words[this.userInput] || null;
+    },
+    status() {
+      if (!this.userInput.length) return "使用者未輸入...";
+      return this.currentWord ? "找到了，試試看！" : "資料庫中沒找到這個字...";
+    },
   },
   created: function(){
     // Vue 物件生成時執行 ajax 取得字彙資料包並處理
@@ -64,11 +41,11 @@ var vm = new Vue({
     $.ajax({
     url: url,
     success: function(evt){
-      let dataContainer = []
       let rawData = evt.feed.entry
       let dicUrl = "http://www.latin-dictionary.net/search/latin/"
       rawData.forEach((item)=>{
-      let wordData = {
+        if (!item.gsx$nomsg.$t) return
+      self.words[item.gsx$nomsg.$t] = {
           stem: item.gsx$詞幹.$t,
           type: item.gsx$性別.$t,
           declension: item.gsx$變格.$t,
@@ -89,20 +66,8 @@ var vm = new Vue({
             VOC: item.gsx$vocpl.$t,
           },
         }
-        dataContainer.push(wordData)
       })
-      self.words = dataContainer
       },
     })
   },
-})
-
-
-
-$(".userInput > input").focus(()=>{
-  vm.inputIsSelected = true
-})
-$(".userInput > input").blur(()=>{
-  vm.status = "使用者未輸入..."
-  vm.inputIsSelected = false
 })

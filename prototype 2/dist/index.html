@@ -12,7 +12,7 @@
   <div class="top">
     <div class="userInput">
       <div class="status">{{status}}</div>
-      <input v-model="userInput" placeholder="可以輸入 mora 或 homo 試試"/>
+      <input v-model.trim="userInput" placeholder="可以輸入 mora 或 homo 試試"/>
     </div>
     <div class="info">
       <div class="show">
@@ -37,7 +37,7 @@
         <label>{{item.cht}}</label>
         <input type="text" v-model="inputData.singleInputs[i]" :key="i"/>
         <div class="ansStatus">
-          <i v-if="inputData.singleInputs[i] === (ansData && ansData.singleInputs[i])" class="fas fa-check"></i>
+          <i v-if="inputData.singleInputs[i] === (currentWord && currentWord.single[item.eng])" class="fas fa-check"></i>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
         <label>{{item.cht}}</label>
         <input type="text" v-model="inputData.pluralInputs[i]"/>
         <div class="ansStatus">
-          <i v-if="inputData.pluralInputs[i] === (ansData && ansData.pluralInputs[i])" class="fas fa-check"></i>
+          <i v-if="inputData.pluralInputs[i] === (currentWord && currentWord.plural[item.eng])" class="fas fa-check"></i>
         </div>
       </div>
     </div>
