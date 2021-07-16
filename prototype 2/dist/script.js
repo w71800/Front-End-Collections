@@ -31,6 +31,7 @@ var vm = new Vue({
       return this.words[this.userInput] || null;
     },
     status() {
+      if (!this.userInput.length) return "使用者未輸入...";
       return this.currentWord ? "找到了，試試看！" : "資料庫中沒找到這個字...";
     },
   },

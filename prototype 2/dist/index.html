@@ -12,7 +12,7 @@
   <div class="top">
     <div class="userInput">
       <div class="status">{{status}}</div>
-      <input v-model="userInput" placeholder="可以輸入 mora 或 homo 試試"/>
+      <input v-model.trim="userInput" placeholder="可以輸入 mora 或 homo 試試"/>
     </div>
     <div class="info">
       <div class="show">
